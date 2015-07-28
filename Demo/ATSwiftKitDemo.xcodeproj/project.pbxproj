@@ -24,7 +24,6 @@
 		82B317A01B6778E8005E3E10 /* ExTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B317781B6778E8005E3E10 /* ExTextView.swift */; };
 		82B317A11B6778E8005E3E10 /* ExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B317791B6778E8005E3E10 /* ExView.swift */; };
 		82B317A21B6778E8005E3E10 /* ExViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3177A1B6778E8005E3E10 /* ExViewController.swift */; };
-		82B317A31B6778E8005E3E10 /* AppDelegate+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3177C1B6778E8005E3E10 /* AppDelegate+ExKit.swift */; };
 		82B317B11B6778E8005E3E10 /* NSData+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3178B1B6778E8005E3E10 /* NSData+ExKit.swift */; };
 		82B317B21B6778E8005E3E10 /* NSDate+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3178C1B6778E8005E3E10 /* NSDate+ExKit.swift */; };
 		82B317B31B6778E8005E3E10 /* String+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3178D1B6778E8005E3E10 /* String+ExKit.swift */; };
@@ -70,7 +69,6 @@
 		82B317781B6778E8005E3E10 /* ExTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExTextView.swift; sourceTree = "<group>"; };
 		82B317791B6778E8005E3E10 /* ExView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExView.swift; sourceTree = "<group>"; };
 		82B3177A1B6778E8005E3E10 /* ExViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExViewController.swift; sourceTree = "<group>"; };
-		82B3177C1B6778E8005E3E10 /* AppDelegate+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ExKit.swift"; sourceTree = "<group>"; };
 		82B3178B1B6778E8005E3E10 /* NSData+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+ExKit.swift"; sourceTree = "<group>"; };
 		82B3178C1B6778E8005E3E10 /* NSDate+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ExKit.swift"; sourceTree = "<group>"; };
 		82B3178D1B6778E8005E3E10 /* String+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ExKit.swift"; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 		82B3177B1B6778E8005E3E10 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				82B3177C1B6778E8005E3E10 /* AppDelegate+ExKit.swift */,
 				82B3178B1B6778E8005E3E10 /* NSData+ExKit.swift */,
 				82B3178C1B6778E8005E3E10 /* NSDate+ExKit.swift */,
 				82B3178D1B6778E8005E3E10 /* String+ExKit.swift */,
@@ -324,7 +321,6 @@
 			files = (
 				82B3179A1B6778E8005E3E10 /* ExButton.swift in Sources */,
 				82B3179C1B6778E8005E3E10 /* ExImageView.swift in Sources */,
-				82B317A31B6778E8005E3E10 /* AppDelegate+ExKit.swift in Sources */,
 				82B317B81B6778E8005E3E10 /* UIViewController+ExKit.swift in Sources */,
 				82B317BB1B6778E8005E3E10 /* SwiftyJSON.swift in Sources */,
 				82B317511B6778C9005E3E10 /* ViewController.swift in Sources */,

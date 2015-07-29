@@ -23,4 +23,4 @@
 
 import UIKit
 
-class ATSTabBarController: UITabBarController { }
+public class ATSTabBarController: UITabBarController { }

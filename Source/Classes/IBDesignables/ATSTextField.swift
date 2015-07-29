@@ -24,7 +24,7 @@
 import UIKit
 
 @IBDesignable
-class IBDesignableTextField: UITextField {
+public class IBDesignableTextField: UITextField {
     @IBInspectable
     var cornerRadius: CGFloat = 0.0 {
         didSet{
@@ -47,14 +47,14 @@ class IBDesignableTextField: UITextField {
     }
 }
 
-class ATSTextField: IBDesignableTextField {
+public class ATSTextField: IBDesignableTextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.initialize()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.initialize()

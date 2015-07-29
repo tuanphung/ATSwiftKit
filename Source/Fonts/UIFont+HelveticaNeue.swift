@@ -23,7 +23,7 @@
 
 import UIKit
 
-extension UIFont {
+public extension UIFont {
     class func HelveticaRegular(fontSize: CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue", size: fontSize)!
     }

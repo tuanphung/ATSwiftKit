@@ -23,7 +23,7 @@
 
 import Foundation
 
-extension NSDate {
+public extension NSDate {
     func ex_toString(dateFormat: String, timeZone: NSTimeZone! = NSTimeZone.localTimeZone()) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.timeZone = timeZone

@@ -23,7 +23,7 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     func ats_imageTintedWithColor(color: UIColor, fraction: CGFloat) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, 0)
         var rect = CGRectZero

@@ -23,10 +23,10 @@
 
 import UIKit
 
-var UIActionSheetClosureKey = "UIActionSheetClosureKey"
+internal var UIActionSheetClosureKey = "UIActionSheetClosureKey"
 internal typealias UIActionSheetClosure = (selectedOption: String) -> ()
 
-extension UIActionSheet {
+public extension UIActionSheet {
     private var ats_handler: UIActionSheetClosure? {
         set(value) {
             let closure = ATSClosureWrapper(closure: value)
@@ -40,11 +40,11 @@ extension UIActionSheet {
         }
     }
     
-    class func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
+    class internal func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
         return self.showInView(view, title: title, cancelButtonTitle: cancelButtonTitle, destructiveButtonTitle: nil, otherButtonTitles: otherButtonTitles, handler: handler)
     }
     
-    class func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, destructiveButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
+    class internal func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, destructiveButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
         
         var actionSheet = UIActionSheet(title: title, delegate: nil, cancelButtonTitle: cancelButtonTitle, destructiveButtonTitle: destructiveButtonTitle)
         actionSheet.delegate = actionSheet

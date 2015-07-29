@@ -24,7 +24,7 @@
 import UIKit
 
 @IBDesignable
-class IBDesignableImageView: UIImageView {
+public class IBDesignableImageView: UIImageView {
     @IBInspectable
     var cornerRadius: CGFloat = 0.0 {
         didSet{
@@ -47,4 +47,4 @@ class IBDesignableImageView: UIImageView {
     }
 }
 
-class ATSImageView: IBDesignableImageView { }
+public class ATSImageView: IBDesignableImageView { }

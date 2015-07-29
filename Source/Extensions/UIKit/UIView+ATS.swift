@@ -23,7 +23,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     func ex_leadingConstraint() -> NSLayoutConstraint? {
         for constraint in self.constraints() as! [NSLayoutConstraint] {
             if (constraint.firstAttribute == .Leading) {

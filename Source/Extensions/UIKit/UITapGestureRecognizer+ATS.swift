@@ -23,9 +23,9 @@
 
 import UIKit
 
-var UITapGestureRecognizerHandlerKey = "UITapGestureRecognizerHandlerKey"
+internal var UITapGestureRecognizerHandlerKey = "UITapGestureRecognizerHandlerKey"
 
-extension UITapGestureRecognizer {
+public extension UITapGestureRecognizer {
     private var ats_handler: (() -> ())? {
         get {
             if let wrapper = objc_getAssociatedObject(self, &UITapGestureRecognizerHandlerKey) as? ATSClosureWrapper<(() -> ())>{

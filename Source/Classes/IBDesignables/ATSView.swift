@@ -24,7 +24,7 @@
 import UIKit
 
 @IBDesignable
-class IBDesignableView: UIView {
+public class IBDesignableView: UIView {
     @IBInspectable
     var cornerRadius: CGFloat = 0.0 {
         didSet{
@@ -98,4 +98,4 @@ class IBDesignableView: UIView {
 //    }
 }
 
-class ATSView: IBDesignableView { }
+public class ATSView: IBDesignableView { }

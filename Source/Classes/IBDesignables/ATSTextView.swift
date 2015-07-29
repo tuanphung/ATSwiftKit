@@ -23,7 +23,7 @@
 
 import UIKit
 
-class ATSTextView: UITextView, UITextViewDelegate {
+public class ATSTextView: UITextView, UITextViewDelegate {
     
     var autoGrowing: Bool = true
     var onSizeChanged: (() -> ())?
@@ -35,7 +35,7 @@ class ATSTextView: UITextView, UITextViewDelegate {
     //MARK: UIProperties
     var placeholderLabel: UILabel!
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.initialize()

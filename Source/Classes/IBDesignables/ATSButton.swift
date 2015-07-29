@@ -24,7 +24,7 @@
 import UIKit
 
 @IBDesignable
-class IBDesignableButton: UIButton {
+public class IBDesignableButton: UIButton {
     @IBInspectable
     var cornerRadius: CGFloat = 0.0 {
         didSet{
@@ -47,4 +47,4 @@ class IBDesignableButton: UIButton {
     }
 }
 
-class ATSButton: IBDesignableButton { }
+public class ATSButton: IBDesignableButton { }

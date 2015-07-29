@@ -26,7 +26,7 @@ import UIKit
 internal var UIAlertViewClosureKey = "UIAlertViewClosureKey"
 internal typealias UIAlertViewClosure = (selectedOption: String) -> ()
 
-extension UIAlertView {
+public extension UIAlertView {
     private var ats_handler: UIAlertViewClosure? {
         set(value) {
             let closure = ATSClosureWrapper(closure: value)
@@ -40,11 +40,11 @@ extension UIAlertView {
         }
     }
     
-    class func show(title: String?, message: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
+    class internal func show(title: String?, message: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
         return self.show(title, message: message, accessoryView: nil, cancelButtonTitle: cancelButtonTitle, otherButtonTitles: otherButtonTitles, handler: handler)
     }
     
-    class func show(title: String?, message: String?, accessoryView: UIView?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
+    class internal func show(title: String?, message: String?, accessoryView: UIView?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
         
         var alertView = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: nil)
         alertView.delegate = alertView

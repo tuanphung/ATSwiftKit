@@ -23,7 +23,7 @@
 
 import Foundation
 
-class ATSClosureWrapper<T> {
+public class ATSClosureWrapper<T> {
     var closure: T?
     
     convenience init(closure: T?) {

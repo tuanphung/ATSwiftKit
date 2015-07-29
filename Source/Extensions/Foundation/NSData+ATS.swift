@@ -23,7 +23,7 @@
 
 import Foundation
 
-extension NSData {
+public extension NSData {
     func ex_toString(encoding: UInt = NSUTF8StringEncoding) -> String {
         let length = self.length
         var buffer = [UInt8](count: length, repeatedValue:0)

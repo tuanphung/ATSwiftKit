@@ -24,7 +24,7 @@
 import UIKit
 
 @IBDesignable
-class IBDesignableLabel: UILabel {
+public class IBDesignableLabel: UILabel {
     @IBInspectable
     var fontName: String = "" {
         didSet{
@@ -62,4 +62,4 @@ class IBDesignableLabel: UILabel {
     }
 }
 
-class ATSLabel: IBDesignableLabel { }
+public class ATSLabel: IBDesignableLabel { }

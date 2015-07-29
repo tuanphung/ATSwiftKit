@@ -24,11 +24,23 @@
 import Foundation
 
 public extension NSDate {
-    func ex_toString(dateFormat: String, timeZone: NSTimeZone! = NSTimeZone.localTimeZone()) -> String {
+    func toString(dateFormat: String, timeZone: NSTimeZone! = NSTimeZone.localTimeZone(), locale: NSLocale! = NSLocale(localeIdentifier: "en_US")) -> String {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.timeZone = timeZone
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
         dateFormatter.dateFormat = dateFormat
+        dateFormatter.timeZone = timeZone
+        dateFormatter.locale = locale
         return dateFormatter.stringFromDate(self)
+    }
+    
+    func toString() -> String {
+        return self.toString("yyyyMMddHHmmssZ", timeZone: nil, locale: nil)
+    }
+    
+    func toString(dateFormat: String) -> String {
+        return self.toString(dateFormat, timeZone: nil, locale: nil)
+    }
+    
+    func toString(dateFormat: String, timeZone: NSTimeZone) -> String {
+            return self.toString(dateFormat, timeZone: timeZone, locale: nil)
     }
 }

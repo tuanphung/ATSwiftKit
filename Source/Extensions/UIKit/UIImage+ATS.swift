@@ -24,7 +24,7 @@
 import UIKit
 
 public extension UIImage {
-    func ats_imageTintedWithColor(color: UIColor, fraction: CGFloat) -> UIImage {
+    func imageTintedWithColor(color: UIColor, fraction: CGFloat) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, 0)
         var rect = CGRectZero
         rect.size = self.size
@@ -42,7 +42,7 @@ public extension UIImage {
         return image
     }
     
-    func ats_blendingImageWIthColor(color: UIColor) -> UIImage {
+    func blendingImageWIthColor(color: UIColor) -> UIImage {
         // begin a new image context, to draw our colored image onto
         UIGraphicsBeginImageContext(self.size)
         

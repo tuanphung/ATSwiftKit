@@ -24,7 +24,7 @@
 import Foundation
 
 public extension NSData {
-    func ex_toString(encoding: UInt = NSUTF8StringEncoding) -> String {
+    func toString(encoding: UInt = NSUTF8StringEncoding) -> String {
         let length = self.length
         var buffer = [UInt8](count: length, repeatedValue:0)
         self.getBytes(&buffer, length: length)

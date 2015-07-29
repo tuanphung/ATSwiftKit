@@ -26,7 +26,7 @@ import Foundation
 public class ATSClosureWrapper<T> {
     var closure: T?
     
-    convenience init(closure: T?) {
+    public convenience init(closure: T?) {
         self.init()
         
         self.closure = closure

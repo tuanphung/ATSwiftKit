@@ -47,24 +47,4 @@ public class IBDesignableTextField: UITextField {
     }
 }
 
-public class ATSTextField: IBDesignableTextField {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        self.initialize()
-    }
-    
-    required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        self.initialize()
-    }
-    
-    func initialize() {
-        self.addTarget(self, action: "focusNextField", forControlEvents: .EditingDidEndOnExit)
-    }
-    
-    func focusNextField() {
-        self.resignFirstResponder()
-    }
-}
+public class ATSTextField: IBDesignableTextField { }

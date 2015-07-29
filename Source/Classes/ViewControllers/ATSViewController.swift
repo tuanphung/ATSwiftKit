@@ -26,55 +26,50 @@ import UIKit
 public class ATSViewController: UIViewController {
 
     // Manage block to execute when ViewController Life-Cycle is already executed
-    var ats_onDidLoad: (() -> ())?
-    var ats_onWillAppear: (() -> ())?
-    var ats_onDidAppear: (() -> ())?
-    var ats_onWillDisappear: (() -> ())?
-    var ats_onDidDisappear: (() -> ())?
+    public var onDidLoad: (() -> ())?
+    public var onWillAppear: (() -> ())?
+    public var onDidAppear: (() -> ())?
+    public var onWillDisappear: (() -> ())?
+    public var onDidDisappear: (() -> ())?
 
-    func ats_setUpComponentsOnLoad() {}
-    func ats_setUpComponentsOnWillAppear() {}
-    func ats_setUpComponentsOnDidAppear() {}
-    func ats_setUpComponentsOnWillDisappear() {}
-    func ats_setUpComponentsOnDidDisappear() {}
+    public func setUpComponentsOnLoad() {}
+    public func setUpComponentsOnWillAppear() {}
+    public func setUpComponentsOnDidAppear() {}
+    public func setUpComponentsOnWillDisappear() {}
+    public func setUpComponentsOnDidDisappear() {}
     
-    override public func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.ats_setUpComponentsOnLoad()
-        
-        self.ats_onDidLoad?()
+        self.setUpComponentsOnLoad()
+        self.onDidLoad?()
     }
     
-    override public func viewWillAppear(animated: Bool) {
+    public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.ats_setUpComponentsOnWillAppear()
-        
-        self.ats_onWillAppear?()
+        self.setUpComponentsOnWillAppear()
+        self.onWillAppear?()
     }
     
-    override public func viewDidAppear(animated: Bool) {
+    public override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.ats_setUpComponentsOnDidAppear()
-        
-        self.ats_onDidAppear?()
+        self.setUpComponentsOnDidAppear()
+        self.onDidAppear?()
     }
     
-    override public func viewWillDisappear(animated: Bool) {
+    public override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.ats_setUpComponentsOnWillDisappear()
-        
-        self.ats_onWillDisappear?()
+        self.setUpComponentsOnWillDisappear()
+        self.onWillDisappear?()
     }
     
-    override public func viewDidDisappear(animated: Bool) {
+    public override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
-        self.ats_setUpComponentsOnDidDisappear()
-        
-        self.ats_onDidDisappear?()
+        self.setUpComponentsOnDidDisappear()
+        self.onDidDisappear?()
     }
 }

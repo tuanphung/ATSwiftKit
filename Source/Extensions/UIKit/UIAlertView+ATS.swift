@@ -23,11 +23,11 @@
 
 import UIKit
 
-internal var UIAlertViewClosureKey = "UIAlertViewClosureKey"
-internal typealias UIAlertViewClosure = (selectedOption: String) -> ()
+var UIAlertViewClosureKey = "UIAlertViewClosureKey"
+public typealias UIAlertViewClosure = (selectedOption: String) -> ()
 
 public extension UIAlertView {
-    private var ats_handler: UIAlertViewClosure? {
+    private var handler: UIAlertViewClosure? {
         set(value) {
             let closure = ATSClosureWrapper(closure: value)
             objc_setAssociatedObject(self, &UIAlertViewClosureKey, closure, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
@@ -40,11 +40,11 @@ public extension UIAlertView {
         }
     }
     
-    class internal func show(title: String?, message: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
+    public class func show(title: String?, message: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
         return self.show(title, message: message, accessoryView: nil, cancelButtonTitle: cancelButtonTitle, otherButtonTitles: otherButtonTitles, handler: handler)
     }
     
-    class internal func show(title: String?, message: String?, accessoryView: UIView?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
+    public class func show(title: String?, message: String?, accessoryView: UIView?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIAlertViewClosure?) -> UIAlertView {
         
         var alertView = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: nil)
         alertView.delegate = alertView
@@ -63,7 +63,7 @@ public extension UIAlertView {
             alertView.cancelButtonIndex = alertView.addButtonWithTitle(cancelButtonTitle!)
         }
         
-        alertView.ats_handler = handler
+        alertView.handler = handler
         
         dispatch_async(dispatch_get_main_queue(), {
             alertView.show()
@@ -76,6 +76,6 @@ public extension UIAlertView {
 extension UIAlertView: UIAlertViewDelegate {
     public func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         alertView.setValue(nil, forKey: "accessoryView")
-        alertView.ats_handler?(selectedOption: alertView.buttonTitleAtIndex(buttonIndex))
+        alertView.handler?(selectedOption: alertView.buttonTitleAtIndex(buttonIndex))
     }
 }

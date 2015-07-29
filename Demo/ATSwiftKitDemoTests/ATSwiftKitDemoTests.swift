@@ -2,7 +2,7 @@
 //  ATSwiftKitDemoTests.swift
 //  ATSwiftKitDemoTests
 //
-//  Created by Tuan Phung on 7/28/15.
+//  Created by Tuan Phung on 7/29/15.
 //  Copyright (c) 2015 Tuan Phung. All rights reserved.
 //
 

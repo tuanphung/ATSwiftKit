@@ -24,63 +24,69 @@
 import UIKit
 
 public extension UIView {
-    func ex_leadingConstraint() -> NSLayoutConstraint? {
-        for constraint in self.constraints() as! [NSLayoutConstraint] {
-            if (constraint.firstAttribute == .Leading) {
-                return constraint
+    var leadingConstraint: NSLayoutConstraint? {
+        get {
+            for constraint in self.constraints() as! [NSLayoutConstraint] {
+                if (constraint.firstAttribute == .Leading) {
+                    return constraint
+                }
             }
+            return nil
         }
-        
-        return nil
     }
     
-    func ex_trailingConstraint() -> NSLayoutConstraint? {
-        for constraint in self.constraints() as! [NSLayoutConstraint] {
-            if (constraint.firstAttribute == .Trailing) {
-                return constraint
+    var trailingConstraint: NSLayoutConstraint? {
+        get {
+            for constraint in self.constraints() as! [NSLayoutConstraint] {
+                if (constraint.firstAttribute == .Trailing) {
+                    return constraint
+                }
             }
+            return nil
         }
-        
-        return nil
     }
     
-    func ex_topConstraint() -> NSLayoutConstraint? {
-        for constraint in self.constraints() as! [NSLayoutConstraint] {
-            if (constraint.firstAttribute == .Top) {
-                return constraint
+    var topConstraint: NSLayoutConstraint? {
+        get {
+            for constraint in self.constraints() as! [NSLayoutConstraint] {
+                if (constraint.firstAttribute == .Top) {
+                    return constraint
+                }
             }
+            return nil
         }
-        
-        return nil
     }
     
-    func ex_bottomConstraint() -> NSLayoutConstraint? {
-        for constraint in self.constraints() as! [NSLayoutConstraint] {
-            if (constraint.firstAttribute == .Bottom) {
-                return constraint
+    var bottomConstraint: NSLayoutConstraint? {
+        get {
+            for constraint in self.constraints() as! [NSLayoutConstraint] {
+                if (constraint.firstAttribute == .Bottom) {
+                    return constraint
+                }
             }
+            return nil
         }
-        
-        return nil
     }
     
-    func ex_heightConstraint() -> NSLayoutConstraint? {
-        for constraint in self.constraints() as! [NSLayoutConstraint] {
-            if (constraint.firstAttribute == .Height) {
-                return constraint
+    var heightConstraint: NSLayoutConstraint? {
+        get {
+            for constraint in self.constraints() as! [NSLayoutConstraint] {
+                if (constraint.firstAttribute == .Height) {
+                    return constraint
+                }
             }
+            return nil
         }
-        
-        return nil
     }
     
-    func ex_widthConstraint() -> NSLayoutConstraint? {
-        for constraint in self.constraints() as! [NSLayoutConstraint] {
-            if (constraint.firstAttribute == .Width) {
-                return constraint
+    var widthConstraint: NSLayoutConstraint? {
+        get {
+            for constraint in self.constraints() as! [NSLayoutConstraint] {
+                if (constraint.firstAttribute == .Width) {
+                    return constraint
+                }
             }
+            return nil
         }
-        
-        return nil
     }
 }

@@ -1,0 +1,14 @@
+PODS:
+  - ATSwiftKit (0.0.3)
+
+DEPENDENCIES:
+  - ATSwiftKit (from `../`)
+
+EXTERNAL SOURCES:
+  ATSwiftKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ATSwiftKit: bd51bca738a23bef3b9dcf6ec78f2d748d551e9d
+
+COCOAPODS: 0.37.2

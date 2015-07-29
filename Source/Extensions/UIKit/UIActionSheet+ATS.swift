@@ -23,11 +23,11 @@
 
 import UIKit
 
-internal var UIActionSheetClosureKey = "UIActionSheetClosureKey"
-internal typealias UIActionSheetClosure = (selectedOption: String) -> ()
+var UIActionSheetClosureKey = "UIActionSheetClosureKey"
+public typealias UIActionSheetClosure = (selectedOption: String) -> ()
 
 public extension UIActionSheet {
-    private var ats_handler: UIActionSheetClosure? {
+    private var handler: UIActionSheetClosure? {
         set(value) {
             let closure = ATSClosureWrapper(closure: value)
             objc_setAssociatedObject(self, &UIActionSheetClosureKey, closure, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
@@ -40,11 +40,11 @@ public extension UIActionSheet {
         }
     }
     
-    class internal func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
+    class func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
         return self.showInView(view, title: title, cancelButtonTitle: cancelButtonTitle, destructiveButtonTitle: nil, otherButtonTitles: otherButtonTitles, handler: handler)
     }
     
-    class internal func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, destructiveButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
+    class func showInView(view: UIView?, title: String?, cancelButtonTitle: String?, destructiveButtonTitle: String?, otherButtonTitles: [String]?, handler: UIActionSheetClosure?) -> UIActionSheet {
         
         var actionSheet = UIActionSheet(title: title, delegate: nil, cancelButtonTitle: cancelButtonTitle, destructiveButtonTitle: destructiveButtonTitle)
         actionSheet.delegate = actionSheet
@@ -59,7 +59,7 @@ public extension UIActionSheet {
             actionSheet.cancelButtonIndex = actionSheet.addButtonWithTitle(cancelButtonTitle!)
         }
         
-        actionSheet.ats_handler = handler
+        actionSheet.handler = handler
         
         dispatch_async(dispatch_get_main_queue(), {
             if let _view = view {
@@ -69,11 +69,10 @@ public extension UIActionSheet {
         
         return actionSheet
     }
-
 }
 
 extension UIActionSheet: UIActionSheetDelegate {
     public func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        actionSheet.ats_handler?(selectedOption: actionSheet.buttonTitleAtIndex(buttonIndex))
+        actionSheet.handler?(selectedOption: actionSheet.buttonTitleAtIndex(buttonIndex))
     }
 }

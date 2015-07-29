@@ -23,29 +23,30 @@
 
 import UIKit
 
-internal var UITapGestureRecognizerHandlerKey = "UITapGestureRecognizerHandlerKey"
+var UITapGestureRecognizerClosureKey = "UITapGestureRecognizerClosureKey"
+public typealias UITapGestureRecognizerClosure = () -> ()
 
 public extension UITapGestureRecognizer {
-    private var ats_handler: (() -> ())? {
+    private var handler: UITapGestureRecognizerClosure? {
         get {
-            if let wrapper = objc_getAssociatedObject(self, &UITapGestureRecognizerHandlerKey) as? ATSClosureWrapper<(() -> ())>{
+            if let wrapper = objc_getAssociatedObject(self, &UITapGestureRecognizerClosureKey) as? ATSClosureWrapper<UITapGestureRecognizerClosure>{
                 return wrapper.closure
             }
             return nil
         }
         set (value) {
-            objc_setAssociatedObject(self, &UITapGestureRecognizerHandlerKey, ATSClosureWrapper(closure: value), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+            objc_setAssociatedObject(self, &UITapGestureRecognizerClosureKey, ATSClosureWrapper(closure: value), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
         }
     }
     
-    convenience init(handler: (() -> ())?) {
+    convenience init(handler: UITapGestureRecognizerClosure?) {
         self.init()
         
         self.addTarget(self, action: "tap")
-        self.ats_handler = handler
+        self.handler = handler
     }
     
-    func tap() {
-        self.ats_handler?()
+    private func tap() {
+        self.handler?()
     }
 }

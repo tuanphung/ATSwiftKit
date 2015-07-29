@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "ATSwiftKit"
-  s.version      = "0.0.2"
-  s.summary      = "Set of extensions and Custom classes are written in Swift"
+  s.version      = "0.0.3"
+  s.summary      = "Set of Extensions and Subclasses are written in Swift"
 
   s.description  = <<-DESC
-                   Set of Swift extensions and Custom classes that help you create an app more quickly.
+                   Set of Swift Extensions and Subclasses that help you create an app more quickly.
                    DESC
 
   s.homepage     = "https://github.com/tuanphung/ATSwiftKit"

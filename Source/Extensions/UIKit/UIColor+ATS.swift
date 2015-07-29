@@ -74,7 +74,7 @@ public extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
     
-    func ats_hexString() -> String {
+    func toHexString() -> String {
         var components = CGColorGetComponents(self.CGColor)
         
         var r = Int(components[0] * 255)

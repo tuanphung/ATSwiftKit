@@ -24,10 +24,8 @@
 import UIKit
 
 public extension UIViewController {
-    /*
-    *** Class Methods ***
-    */
-    class func ex_instanceFromNib() -> UIViewController! {
+    
+    public class func instanceFromNib() -> UIViewController! {
         var _nibName: String! = nil
         
         let fullClassName = NSStringFromClass(self)
@@ -39,7 +37,7 @@ public extension UIViewController {
         return self(nibName: _nibName, bundle: nil)
     }
     
-    class func ex_instanceFromNib(nibName: String?, bundle: NSBundle?) -> UIViewController! {
+    class func instanceFromNib(nibName: String?, bundle: NSBundle?) -> UIViewController! {
         var _nibName: String! = nil
         
         // If nibName == nil, get default name is Classname
@@ -57,10 +55,7 @@ public extension UIViewController {
         return self(nibName: _nibName, bundle: bundle)
     }
     
-    /*
-    *** Instance Methods ***
-    */
-    final func ex_defaultNavigationController() -> UINavigationController {
+    final func defaultNavigationController() -> UINavigationController {
         // Return current NavigationController
         // If not, create new instance of NavigationController
         if let nav = self.navigationController {

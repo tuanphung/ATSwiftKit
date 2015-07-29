@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ATSwiftKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Set of extensions and Custom classes are written in Swift"
 
   s.description  = <<-DESC

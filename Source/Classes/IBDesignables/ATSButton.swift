@@ -1,5 +1,5 @@
 //
-// UIFont+HelveticaNeue.swift
+// ATSButton.swift
 //
 // Copyright (c) 2015 PHUNG ANH TUAN. All rights reserved.
 //
@@ -23,20 +23,28 @@
 
 import UIKit
 
-extension UIFont {
-    class func HelveticaRegular(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue", size: fontSize)!
+@IBDesignable
+class IBDesignableButton: UIButton {
+    @IBInspectable
+    var cornerRadius: CGFloat = 0.0 {
+        didSet{
+            layer.cornerRadius = cornerRadius
+        }
     }
     
-    class func HelveticaLight(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Light", size: fontSize)!
+    @IBInspectable
+    var borderColor: UIColor = UIColor.blackColor() {
+        didSet{
+            layer.borderColor = borderColor.CGColor
+        }
     }
     
-    class func HelveticaBold(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: fontSize)!
-    }
-    
-    class func HelveticaMedium(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Medium", size: fontSize)!
+    @IBInspectable
+    var borderWidth: CGFloat = 0.0 {
+        didSet{
+            layer.borderWidth = borderWidth
+        }
     }
 }
+
+class ATSButton: IBDesignableButton { }

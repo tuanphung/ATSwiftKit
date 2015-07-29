@@ -1,5 +1,5 @@
 //
-// UIFont+HelveticaNeue.swift
+// NSData+ATS.swift
 //
 // Copyright (c) 2015 PHUNG ANH TUAN. All rights reserved.
 //
@@ -21,22 +21,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-extension UIFont {
-    class func HelveticaRegular(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue", size: fontSize)!
-    }
-    
-    class func HelveticaLight(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Light", size: fontSize)!
-    }
-    
-    class func HelveticaBold(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: fontSize)!
-    }
-    
-    class func HelveticaMedium(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Medium", size: fontSize)!
+extension NSData {
+    func ex_toString(encoding: UInt = NSUTF8StringEncoding) -> String {
+        let length = self.length
+        var buffer = [UInt8](count: length, repeatedValue:0)
+        self.getBytes(&buffer, length: length)
+        
+        if let string = String(bytes:buffer, encoding:NSUTF8StringEncoding) {
+            return string
+        }
+        
+        return ""
     }
 }

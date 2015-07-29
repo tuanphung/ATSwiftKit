@@ -1,5 +1,5 @@
 //
-// UIFont+HelveticaNeue.swift
+// ATSTextField.swift
 //
 // Copyright (c) 2015 PHUNG ANH TUAN. All rights reserved.
 //
@@ -23,20 +23,48 @@
 
 import UIKit
 
-extension UIFont {
-    class func HelveticaRegular(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue", size: fontSize)!
+@IBDesignable
+class IBDesignableTextField: UITextField {
+    @IBInspectable
+    var cornerRadius: CGFloat = 0.0 {
+        didSet{
+            layer.cornerRadius = cornerRadius
+        }
     }
     
-    class func HelveticaLight(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Light", size: fontSize)!
+    @IBInspectable
+    var borderColor: UIColor = UIColor.blackColor() {
+        didSet{
+            layer.borderColor = borderColor.CGColor
+        }
     }
     
-    class func HelveticaBold(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: fontSize)!
+    @IBInspectable
+    var borderWidth: CGFloat = 0.0 {
+        didSet{
+            layer.borderWidth = borderWidth
+        }
+    }
+}
+
+class ATSTextField: IBDesignableTextField {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.initialize()
     }
     
-    class func HelveticaMedium(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Medium", size: fontSize)!
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.initialize()
+    }
+    
+    func initialize() {
+        self.addTarget(self, action: "focusNextField", forControlEvents: .EditingDidEndOnExit)
+    }
+    
+    func focusNextField() {
+        self.resignFirstResponder()
     }
 }

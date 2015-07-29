@@ -14,26 +14,26 @@
 		82B317591B6778C9005E3E10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B317571B6778C9005E3E10 /* LaunchScreen.xib */; };
 		82B317651B6778C9005E3E10 /* ATSwiftKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B317641B6778C9005E3E10 /* ATSwiftKitDemoTests.swift */; };
 		82B317B91B6778E8005E3E10 /* UIFont+HelveticaNeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B317941B6778E8005E3E10 /* UIFont+HelveticaNeue.swift */; };
-		82B630591B68B5D000109792 /* NSData+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630561B68B5D000109792 /* NSData+ExKit.swift */; };
-		82B6305A1B68B5D000109792 /* NSDate+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630571B68B5D000109792 /* NSDate+ExKit.swift */; };
-		82B6305B1B68B5D000109792 /* String+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630581B68B5D000109792 /* String+ExKit.swift */; };
-		82B630621B68B85500109792 /* UIColor+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6305D1B68B85500109792 /* UIColor+ExKit.swift */; };
-		82B630631B68B85500109792 /* UIImage+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6305E1B68B85500109792 /* UIImage+ExKit.swift */; };
-		82B630641B68B85500109792 /* UITapGestureRecognizer+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6305F1B68B85500109792 /* UITapGestureRecognizer+ExKit.swift */; };
-		82B630651B68B85500109792 /* UIView+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630601B68B85500109792 /* UIView+ExKit.swift */; };
-		82B630661B68B85500109792 /* UIViewController+ExKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630611B68B85500109792 /* UIViewController+ExKit.swift */; };
-		82B630791B68B8A100109792 /* ATClosureWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630751B68B8A100109792 /* ATClosureWrapper.swift */; };
-		82B6307A1B68B8A100109792 /* ATUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630761B68B8A100109792 /* ATUtilities.swift */; };
-		82B6307B1B68B8A100109792 /* UIActionSheet+ATSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630771B68B8A100109792 /* UIActionSheet+ATSwift.swift */; };
-		82B6307C1B68B8A100109792 /* UIAlertView+ATSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630781B68B8A100109792 /* UIAlertView+ATSwift.swift */; };
-		82B630841B68B8A600109792 /* ATButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6307E1B68B8A600109792 /* ATButton.swift */; };
-		82B630851B68B8A600109792 /* ATImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6307F1B68B8A600109792 /* ATImageView.swift */; };
-		82B630861B68B8A600109792 /* ATLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630801B68B8A600109792 /* ATLabel.swift */; };
-		82B630871B68B8A600109792 /* ATTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630811B68B8A600109792 /* ATTextField.swift */; };
-		82B630881B68B8A600109792 /* ATTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630821B68B8A600109792 /* ATTextView.swift */; };
-		82B630891B68B8A600109792 /* ATView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630831B68B8A600109792 /* ATView.swift */; };
-		82B630921B68B99A00109792 /* ATTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630901B68B99A00109792 /* ATTabBarController.swift */; };
-		82B630931B68B99A00109792 /* ATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630911B68B99A00109792 /* ATViewController.swift */; };
+		82B630791B68B8A100109792 /* ATSClosureWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630751B68B8A100109792 /* ATSClosureWrapper.swift */; };
+		82B6307A1B68B8A100109792 /* ATSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630761B68B8A100109792 /* ATSUtilities.swift */; };
+		82B630841B68B8A600109792 /* ATSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6307E1B68B8A600109792 /* ATSButton.swift */; };
+		82B630851B68B8A600109792 /* ATSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6307F1B68B8A600109792 /* ATSImageView.swift */; };
+		82B630861B68B8A600109792 /* ATSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630801B68B8A600109792 /* ATSLabel.swift */; };
+		82B630871B68B8A600109792 /* ATSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630811B68B8A600109792 /* ATSTextField.swift */; };
+		82B630881B68B8A600109792 /* ATSTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630821B68B8A600109792 /* ATSTextView.swift */; };
+		82B630891B68B8A600109792 /* ATSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630831B68B8A600109792 /* ATSView.swift */; };
+		82B630921B68B99A00109792 /* ATSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630901B68B99A00109792 /* ATSTabBarController.swift */; };
+		82B630931B68B99A00109792 /* ATSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630911B68B99A00109792 /* ATSViewController.swift */; };
+		82B630A11B68C61A00109792 /* NSData+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630961B68C61A00109792 /* NSData+ATS.swift */; };
+		82B630A21B68C61A00109792 /* NSDate+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630971B68C61A00109792 /* NSDate+ATS.swift */; };
+		82B630A31B68C61A00109792 /* String+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630981B68C61A00109792 /* String+ATS.swift */; };
+		82B630A41B68C61A00109792 /* UIActionSheet+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6309A1B68C61A00109792 /* UIActionSheet+ATS.swift */; };
+		82B630A51B68C61A00109792 /* UIAlertView+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6309B1B68C61A00109792 /* UIAlertView+ATS.swift */; };
+		82B630A61B68C61A00109792 /* UIColor+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6309C1B68C61A00109792 /* UIColor+ATS.swift */; };
+		82B630A71B68C61A00109792 /* UIImage+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6309D1B68C61A00109792 /* UIImage+ATS.swift */; };
+		82B630A81B68C61A00109792 /* UITapGestureRecognizer+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6309E1B68C61A00109792 /* UITapGestureRecognizer+ATS.swift */; };
+		82B630A91B68C61A00109792 /* UIView+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6309F1B68C61A00109792 /* UIView+ATS.swift */; };
+		82B630AA1B68C61A00109792 /* UIViewController+ATS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B630A01B68C61A00109792 /* UIViewController+ATS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,26 +59,26 @@
 		82B317641B6778C9005E3E10 /* ATSwiftKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSwiftKitDemoTests.swift; sourceTree = "<group>"; };
 		82B317941B6778E8005E3E10 /* UIFont+HelveticaNeue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+HelveticaNeue.swift"; sourceTree = "<group>"; };
 		82B630541B689EA900109792 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		82B630561B68B5D000109792 /* NSData+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+ExKit.swift"; sourceTree = "<group>"; };
-		82B630571B68B5D000109792 /* NSDate+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ExKit.swift"; sourceTree = "<group>"; };
-		82B630581B68B5D000109792 /* String+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ExKit.swift"; sourceTree = "<group>"; };
-		82B6305D1B68B85500109792 /* UIColor+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ExKit.swift"; sourceTree = "<group>"; };
-		82B6305E1B68B85500109792 /* UIImage+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ExKit.swift"; sourceTree = "<group>"; };
-		82B6305F1B68B85500109792 /* UITapGestureRecognizer+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+ExKit.swift"; sourceTree = "<group>"; };
-		82B630601B68B85500109792 /* UIView+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ExKit.swift"; sourceTree = "<group>"; };
-		82B630611B68B85500109792 /* UIViewController+ExKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExKit.swift"; sourceTree = "<group>"; };
-		82B630751B68B8A100109792 /* ATClosureWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATClosureWrapper.swift; sourceTree = "<group>"; };
-		82B630761B68B8A100109792 /* ATUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATUtilities.swift; sourceTree = "<group>"; };
-		82B630771B68B8A100109792 /* UIActionSheet+ATSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActionSheet+ATSwift.swift"; sourceTree = "<group>"; };
-		82B630781B68B8A100109792 /* UIAlertView+ATSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertView+ATSwift.swift"; sourceTree = "<group>"; };
-		82B6307E1B68B8A600109792 /* ATButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATButton.swift; sourceTree = "<group>"; };
-		82B6307F1B68B8A600109792 /* ATImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATImageView.swift; sourceTree = "<group>"; };
-		82B630801B68B8A600109792 /* ATLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLabel.swift; sourceTree = "<group>"; };
-		82B630811B68B8A600109792 /* ATTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTextField.swift; sourceTree = "<group>"; };
-		82B630821B68B8A600109792 /* ATTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTextView.swift; sourceTree = "<group>"; };
-		82B630831B68B8A600109792 /* ATView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATView.swift; sourceTree = "<group>"; };
-		82B630901B68B99A00109792 /* ATTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTabBarController.swift; sourceTree = "<group>"; };
-		82B630911B68B99A00109792 /* ATViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATViewController.swift; sourceTree = "<group>"; };
+		82B630751B68B8A100109792 /* ATSClosureWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSClosureWrapper.swift; sourceTree = "<group>"; };
+		82B630761B68B8A100109792 /* ATSUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSUtilities.swift; sourceTree = "<group>"; };
+		82B6307E1B68B8A600109792 /* ATSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSButton.swift; sourceTree = "<group>"; };
+		82B6307F1B68B8A600109792 /* ATSImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSImageView.swift; sourceTree = "<group>"; };
+		82B630801B68B8A600109792 /* ATSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSLabel.swift; sourceTree = "<group>"; };
+		82B630811B68B8A600109792 /* ATSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSTextField.swift; sourceTree = "<group>"; };
+		82B630821B68B8A600109792 /* ATSTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSTextView.swift; sourceTree = "<group>"; };
+		82B630831B68B8A600109792 /* ATSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSView.swift; sourceTree = "<group>"; };
+		82B630901B68B99A00109792 /* ATSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSTabBarController.swift; sourceTree = "<group>"; };
+		82B630911B68B99A00109792 /* ATSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSViewController.swift; sourceTree = "<group>"; };
+		82B630961B68C61A00109792 /* NSData+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+ATS.swift"; sourceTree = "<group>"; };
+		82B630971B68C61A00109792 /* NSDate+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ATS.swift"; sourceTree = "<group>"; };
+		82B630981B68C61A00109792 /* String+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ATS.swift"; sourceTree = "<group>"; };
+		82B6309A1B68C61A00109792 /* UIActionSheet+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActionSheet+ATS.swift"; sourceTree = "<group>"; };
+		82B6309B1B68C61A00109792 /* UIAlertView+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertView+ATS.swift"; sourceTree = "<group>"; };
+		82B6309C1B68C61A00109792 /* UIColor+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ATS.swift"; sourceTree = "<group>"; };
+		82B6309D1B68C61A00109792 /* UIImage+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ATS.swift"; sourceTree = "<group>"; };
+		82B6309E1B68C61A00109792 /* UITapGestureRecognizer+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+ATS.swift"; sourceTree = "<group>"; };
+		82B6309F1B68C61A00109792 /* UIView+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ATS.swift"; sourceTree = "<group>"; };
+		82B630A01B68C61A00109792 /* UIViewController+ATS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ATS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				82B3176F1B6778E8005E3E10 /* Classes */,
-				82B3177B1B6778E8005E3E10 /* Extensions */,
+				82B630941B68C61A00109792 /* Extensions */,
 				82B317931B6778E8005E3E10 /* Fonts */,
 			);
 			name = Source;
@@ -177,15 +177,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		82B3177B1B6778E8005E3E10 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				82B6305C1B68B85500109792 /* UIKit */,
-				82B630551B68B5D000109792 /* Foundation */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		82B317931B6778E8005E3E10 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,35 +185,11 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		82B630551B68B5D000109792 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				82B630561B68B5D000109792 /* NSData+ExKit.swift */,
-				82B630571B68B5D000109792 /* NSDate+ExKit.swift */,
-				82B630581B68B5D000109792 /* String+ExKit.swift */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		82B6305C1B68B85500109792 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				82B6305D1B68B85500109792 /* UIColor+ExKit.swift */,
-				82B6305E1B68B85500109792 /* UIImage+ExKit.swift */,
-				82B6305F1B68B85500109792 /* UITapGestureRecognizer+ExKit.swift */,
-				82B630601B68B85500109792 /* UIView+ExKit.swift */,
-				82B630611B68B85500109792 /* UIViewController+ExKit.swift */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
 		82B630741B68B8A100109792 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				82B630751B68B8A100109792 /* ATClosureWrapper.swift */,
-				82B630761B68B8A100109792 /* ATUtilities.swift */,
-				82B630771B68B8A100109792 /* UIActionSheet+ATSwift.swift */,
-				82B630781B68B8A100109792 /* UIAlertView+ATSwift.swift */,
+				82B630751B68B8A100109792 /* ATSClosureWrapper.swift */,
+				82B630761B68B8A100109792 /* ATSUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -230,12 +197,12 @@
 		82B6307D1B68B8A600109792 /* IBDesignables */ = {
 			isa = PBXGroup;
 			children = (
-				82B6307E1B68B8A600109792 /* ATButton.swift */,
-				82B6307F1B68B8A600109792 /* ATImageView.swift */,
-				82B630801B68B8A600109792 /* ATLabel.swift */,
-				82B630811B68B8A600109792 /* ATTextField.swift */,
-				82B630821B68B8A600109792 /* ATTextView.swift */,
-				82B630831B68B8A600109792 /* ATView.swift */,
+				82B6307E1B68B8A600109792 /* ATSButton.swift */,
+				82B6307F1B68B8A600109792 /* ATSImageView.swift */,
+				82B630801B68B8A600109792 /* ATSLabel.swift */,
+				82B630811B68B8A600109792 /* ATSTextField.swift */,
+				82B630821B68B8A600109792 /* ATSTextView.swift */,
+				82B630831B68B8A600109792 /* ATSView.swift */,
 			);
 			path = IBDesignables;
 			sourceTree = "<group>";
@@ -243,10 +210,43 @@
 		82B6308F1B68B99A00109792 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				82B630901B68B99A00109792 /* ATTabBarController.swift */,
-				82B630911B68B99A00109792 /* ATViewController.swift */,
+				82B630901B68B99A00109792 /* ATSTabBarController.swift */,
+				82B630911B68B99A00109792 /* ATSViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		82B630941B68C61A00109792 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82B630951B68C61A00109792 /* Foundation */,
+				82B630991B68C61A00109792 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82B630951B68C61A00109792 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				82B630961B68C61A00109792 /* NSData+ATS.swift */,
+				82B630971B68C61A00109792 /* NSDate+ATS.swift */,
+				82B630981B68C61A00109792 /* String+ATS.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		82B630991B68C61A00109792 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				82B6309A1B68C61A00109792 /* UIActionSheet+ATS.swift */,
+				82B6309B1B68C61A00109792 /* UIAlertView+ATS.swift */,
+				82B6309C1B68C61A00109792 /* UIColor+ATS.swift */,
+				82B6309D1B68C61A00109792 /* UIImage+ATS.swift */,
+				82B6309E1B68C61A00109792 /* UITapGestureRecognizer+ATS.swift */,
+				82B6309F1B68C61A00109792 /* UIView+ATS.swift */,
+				82B630A01B68C61A00109792 /* UIViewController+ATS.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,29 +349,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B630921B68B99A00109792 /* ATTabBarController.swift in Sources */,
-				82B630881B68B8A600109792 /* ATTextView.swift in Sources */,
+				82B630A71B68C61A00109792 /* UIImage+ATS.swift in Sources */,
+				82B630921B68B99A00109792 /* ATSTabBarController.swift in Sources */,
+				82B630AA1B68C61A00109792 /* UIViewController+ATS.swift in Sources */,
+				82B630881B68B8A600109792 /* ATSTextView.swift in Sources */,
 				82B317511B6778C9005E3E10 /* ViewController.swift in Sources */,
-				82B630651B68B85500109792 /* UIView+ExKit.swift in Sources */,
-				82B630841B68B8A600109792 /* ATButton.swift in Sources */,
-				82B630851B68B8A600109792 /* ATImageView.swift in Sources */,
-				82B630791B68B8A100109792 /* ATClosureWrapper.swift in Sources */,
-				82B6307A1B68B8A100109792 /* ATUtilities.swift in Sources */,
-				82B630891B68B8A600109792 /* ATView.swift in Sources */,
-				82B630861B68B8A600109792 /* ATLabel.swift in Sources */,
-				82B630591B68B5D000109792 /* NSData+ExKit.swift in Sources */,
+				82B630A21B68C61A00109792 /* NSDate+ATS.swift in Sources */,
+				82B630A31B68C61A00109792 /* String+ATS.swift in Sources */,
+				82B630A41B68C61A00109792 /* UIActionSheet+ATS.swift in Sources */,
+				82B630841B68B8A600109792 /* ATSButton.swift in Sources */,
+				82B630A11B68C61A00109792 /* NSData+ATS.swift in Sources */,
+				82B630851B68B8A600109792 /* ATSImageView.swift in Sources */,
+				82B630A51B68C61A00109792 /* UIAlertView+ATS.swift in Sources */,
+				82B630791B68B8A100109792 /* ATSClosureWrapper.swift in Sources */,
+				82B6307A1B68B8A100109792 /* ATSUtilities.swift in Sources */,
+				82B630891B68B8A600109792 /* ATSView.swift in Sources */,
+				82B630861B68B8A600109792 /* ATSLabel.swift in Sources */,
 				82B317B91B6778E8005E3E10 /* UIFont+HelveticaNeue.swift in Sources */,
-				82B630661B68B85500109792 /* UIViewController+ExKit.swift in Sources */,
-				82B630871B68B8A600109792 /* ATTextField.swift in Sources */,
-				82B630631B68B85500109792 /* UIImage+ExKit.swift in Sources */,
-				82B6305A1B68B5D000109792 /* NSDate+ExKit.swift in Sources */,
+				82B630A91B68C61A00109792 /* UIView+ATS.swift in Sources */,
+				82B630871B68B8A600109792 /* ATSTextField.swift in Sources */,
+				82B630A81B68C61A00109792 /* UITapGestureRecognizer+ATS.swift in Sources */,
+				82B630A61B68C61A00109792 /* UIColor+ATS.swift in Sources */,
 				82B3174F1B6778C9005E3E10 /* AppDelegate.swift in Sources */,
-				82B630621B68B85500109792 /* UIColor+ExKit.swift in Sources */,
-				82B6307B1B68B8A100109792 /* UIActionSheet+ATSwift.swift in Sources */,
-				82B6307C1B68B8A100109792 /* UIAlertView+ATSwift.swift in Sources */,
-				82B6305B1B68B5D000109792 /* String+ExKit.swift in Sources */,
-				82B630931B68B99A00109792 /* ATViewController.swift in Sources */,
-				82B630641B68B85500109792 /* UITapGestureRecognizer+ExKit.swift in Sources */,
+				82B630931B68B99A00109792 /* ATSViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/tuanphung/ATSwiftKit.git", :tag => "0.0.1" }
-  s.source_files  = "Source/**/*.swift"
+  s.source       = { :git => "https://github.com/tuanphung/ATSwiftKit.git", :tag => s.version }
+  s.source_files  = "Source/**/*.swift", "Source/**/**/*.swift"
 
   s.framework  = "Foundation", "UIKit"
   s.requires_arc = true

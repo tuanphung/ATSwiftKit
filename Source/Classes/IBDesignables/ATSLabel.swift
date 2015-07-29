@@ -1,5 +1,5 @@
 //
-// UIFont+HelveticaNeue.swift
+// ATSLabel.swift
 //
 // Copyright (c) 2015 PHUNG ANH TUAN. All rights reserved.
 //
@@ -23,20 +23,43 @@
 
 import UIKit
 
-extension UIFont {
-    class func HelveticaRegular(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue", size: fontSize)!
+@IBDesignable
+class IBDesignableLabel: UILabel {
+    @IBInspectable
+    var fontName: String = "" {
+        didSet{
+            font = UIFont(name: fontName, size: fontSize)
+        }
     }
     
-    class func HelveticaLight(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Light", size: fontSize)!
+    @IBInspectable
+    var fontSize: CGFloat = 14 {
+        didSet{
+            font = UIFont(name: fontName, size: fontSize)
+        }
     }
     
-    class func HelveticaBold(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: fontSize)!
+    @IBInspectable
+    var cornerRadius: CGFloat = 0.0 {
+        didSet{
+            layer.cornerRadius = cornerRadius
+            clipsToBounds = true
+        }
     }
     
-    class func HelveticaMedium(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Medium", size: fontSize)!
+    @IBInspectable
+    var borderColor: UIColor = UIColor.blackColor() {
+        didSet{
+            layer.borderColor = borderColor.CGColor
+        }
+    }
+    
+    @IBInspectable
+    var borderWidth: CGFloat = 0.5 {
+        didSet{
+            layer.borderWidth = 0.5
+        }
     }
 }
+
+class ATSLabel: IBDesignableLabel { }

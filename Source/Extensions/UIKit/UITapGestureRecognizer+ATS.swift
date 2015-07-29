@@ -1,5 +1,5 @@
 //
-// UIFont+HelveticaNeue.swift
+// UITapGestureRecognizer+ATS.swift
 //
 // Copyright (c) 2015 PHUNG ANH TUAN. All rights reserved.
 //
@@ -23,20 +23,29 @@
 
 import UIKit
 
-extension UIFont {
-    class func HelveticaRegular(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue", size: fontSize)!
+var UITapGestureRecognizerHandlerKey = "UITapGestureRecognizerHandlerKey"
+
+extension UITapGestureRecognizer {
+    private var ats_handler: (() -> ())? {
+        get {
+            if let wrapper = objc_getAssociatedObject(self, &UITapGestureRecognizerHandlerKey) as? ATSClosureWrapper<(() -> ())>{
+                return wrapper.closure
+            }
+            return nil
+        }
+        set (value) {
+            objc_setAssociatedObject(self, &UITapGestureRecognizerHandlerKey, ATSClosureWrapper(closure: value), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+        }
     }
     
-    class func HelveticaLight(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Light", size: fontSize)!
+    convenience init(handler: (() -> ())?) {
+        self.init()
+        
+        self.addTarget(self, action: "tap")
+        self.ats_handler = handler
     }
     
-    class func HelveticaBold(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: fontSize)!
-    }
-    
-    class func HelveticaMedium(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Medium", size: fontSize)!
+    func tap() {
+        self.ats_handler?()
     }
 }

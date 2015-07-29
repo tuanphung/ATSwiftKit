@@ -1,10 +1,25 @@
 //
-//  ATAlertView.swift
-//  ATSwiftKit
+// UIActionSheet+AT.swift
 //
-//  Created by Tuan Phung on 1/21/15.
-//  Copyright (c) 2015 Tuan Phung. All rights reserved.
+// Copyright (c) 2015 PHUNG ANH TUAN. All rights reserved.
 //
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 import UIKit
 
@@ -12,13 +27,13 @@ var UIActionSheetClosureKey = "UIActionSheetClosureKey"
 internal typealias UIActionSheetClosure = (selectedOption: String) -> ()
 
 extension UIActionSheet {
-    private var at_closure: UIActionSheetClosure? {
+    private var ats_handler: UIActionSheetClosure? {
         set(value) {
-            let closure = ATClosureWrapper(closure: value)
+            let closure = ATSClosureWrapper(closure: value)
             objc_setAssociatedObject(self, &UIActionSheetClosureKey, closure, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
         }
         get {
-            if let wrapper = objc_getAssociatedObject(self, &UIActionSheetClosureKey) as? ATClosureWrapper<UIActionSheetClosure>{
+            if let wrapper = objc_getAssociatedObject(self, &UIActionSheetClosureKey) as? ATSClosureWrapper<UIActionSheetClosure>{
                 return wrapper.closure
             }
             return nil
@@ -44,7 +59,7 @@ extension UIActionSheet {
             actionSheet.cancelButtonIndex = actionSheet.addButtonWithTitle(cancelButtonTitle!)
         }
         
-        actionSheet.at_closure = handler
+        actionSheet.ats_handler = handler
         
         dispatch_async(dispatch_get_main_queue(), {
             if let _view = view {
@@ -59,6 +74,6 @@ extension UIActionSheet {
 
 extension UIActionSheet: UIActionSheetDelegate {
     public func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        actionSheet.at_closure?(selectedOption: actionSheet.buttonTitleAtIndex(buttonIndex))
+        actionSheet.ats_handler?(selectedOption: actionSheet.buttonTitleAtIndex(buttonIndex))
     }
 }

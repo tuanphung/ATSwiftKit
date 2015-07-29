@@ -16,12 +16,12 @@ extension UITapGestureRecognizer {
         self.init()
         
         self.addTarget(self, action: "tap")
-        objc_setAssociatedObject(self, &ExAssociatedTapGestureRecognizerKey, ExClosure(block: block), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+        objc_setAssociatedObject(self, &ExAssociatedTapGestureRecognizerKey, ATClosureWrapper(closure: block), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
     }
     
     func block() -> (() -> ())? {
-        var closure = objc_getAssociatedObject(self, &ExAssociatedTapGestureRecognizerKey) as! ExClosure
-        return closure.block
+        var wrapper = objc_getAssociatedObject(self, &ExAssociatedTapGestureRecognizerKey) as! ATClosureWrapper<() -> ()>
+        return wrapper.closure
     }
     
     func tap() {

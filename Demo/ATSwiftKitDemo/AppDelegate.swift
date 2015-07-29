@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        ATUtilities.delay(1, closure: { () -> () in
+//            UIActionSheet.showInView(self.window, title: "AAA", cancelButtonTitle: "CCC", otherButtonTitles: ["Haha", "Hehe"], handler: { (selectedOption) -> () in
+//                println(selectedOption)
+//            })
+            
+            UIAlertView.show("AAA", message: "CCC", accessoryView: nil, cancelButtonTitle: "CCCC", otherButtonTitles: ["OK", "BB"], handler: { (selectedOption) -> () in
+                                println(selectedOption)
+            })
+        })
         return true
     }
 

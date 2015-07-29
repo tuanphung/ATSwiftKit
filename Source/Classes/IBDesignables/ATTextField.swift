@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class IBTextFieldDesignable: UITextField {
+class IBDesignableTextField: UITextField {
     @IBInspectable
     var cornerRadius: CGFloat = 0.0 {
         didSet{
@@ -32,7 +32,7 @@ class IBTextFieldDesignable: UITextField {
     }
 }
 
-class ExTextField: IBTextFieldDesignable {
+class ATTextField: IBDesignableTextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         

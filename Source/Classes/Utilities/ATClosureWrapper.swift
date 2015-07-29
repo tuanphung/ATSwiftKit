@@ -8,12 +8,12 @@
 
 import Foundation
 
-class ExClosure {
-    var block: (() -> ())?
+class ATClosureWrapper<T> {
+    var closure: T?
     
-    convenience init(block: (() -> ())?) {
+    convenience init(closure: T?) {
         self.init()
         
-        self.block = block
+        self.closure = closure
     }
 }

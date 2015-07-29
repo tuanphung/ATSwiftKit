@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class IBViewDesignable: UIView {
+class IBDesignableView: UIView {
     @IBInspectable
     var cornerRadius: CGFloat = 0.0 {
         didSet{
@@ -83,6 +83,4 @@ class IBViewDesignable: UIView {
 //    }
 }
 
-class ExView: IBViewDesignable {
-    
-}
+class ATView: IBDesignableView { }

@@ -1,15 +1,15 @@
 //
-//  iImageView.swift
+//  IButton.swift
 //  upaty
 //
-//  Created by Tuan Phung on 12/7/14.
-//  Copyright (c) 2014 Tuan Phung. All rights reserved.
+//  Created by Tuan Phung on 1/6/15.
+//  Copyright (c) 2015 Tuan Phung. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class IBImageViewDesignable: UIImageView {
+class IBDesignableButton: UIButton {
     @IBInspectable
     var cornerRadius: CGFloat = 0.0 {
         didSet{
@@ -32,14 +32,4 @@ class IBImageViewDesignable: UIImageView {
     }
 }
 
-class ExImageView: IBImageViewDesignable {
-    var autoCircle: Bool = false
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        if (self.autoCircle) {
-            self.layer.cornerRadius = self.bounds.size.width / 2
-        }
-    }
-}
+class ATButton: IBDesignableButton { }

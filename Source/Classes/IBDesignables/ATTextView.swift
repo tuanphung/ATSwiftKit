@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExTextView: UITextView, UITextViewDelegate {
+class ATTextView: UITextView, UITextViewDelegate {
     
     var autoGrowing: Bool = true
     var onSizeChanged: (() -> ())?

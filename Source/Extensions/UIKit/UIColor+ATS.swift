@@ -45,15 +45,14 @@ public extension UIColor {
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue:  CGFloat = 0.0
-        var alpha: CGFloat = 1.0
         
         if hexString.hasPrefix("#") {
-            let index   = advance(hexString.startIndex, 1)
+            let index   = hexString.startIndex.advancedBy(1)
             let hex     = hexString.substringFromIndex(index)
             let scanner = NSScanner(string: hex)
             var hexValue: CUnsignedLongLong = 0
             if scanner.scanHexLongLong(&hexValue) {
-                switch (count(hex)) {
+                switch (hex.characters.count) {
                 case 3:
                     red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
                     green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0
@@ -66,21 +65,21 @@ public extension UIColor {
                     print("Invalid RGB string, number of characters after '#' should be either 3 or 6")
                 }
             } else {
-                println("Scan hex error")
+                print("Scan hex error")
             }
         } else {
             print("Invalid RGB string, missing '#' as prefix")
         }
-        self.init(red:red, green:green, blue:blue, alpha:alpha)
+        self.init(red:red, green:green, blue:blue, alpha: 1.0)
     }
     
     func toHexString() -> String {
-        var components = CGColorGetComponents(self.CGColor)
+        let components = CGColorGetComponents(self.CGColor)
         
-        var r = Int(components[0] * 255)
-        var g = Int(components[1] * 255)
-        var b = Int(components[2] * 255)
-
+        let r = Int(components[0] * 255)
+        let g = Int(components[1] * 255)
+        let b = Int(components[2] * 255)
+        
         return String(format: "#%02lX%02lX%02lX", r, g, b)
     }
 }
